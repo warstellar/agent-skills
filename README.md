@@ -1,9 +1,9 @@
 # agent-skills
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-b083f0)](https://code.claude.com/docs/en/skills)
+[![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-b083f0)](https://code.claude.com/docs/en/skills)
 
-A collection of [Agent Skills](https://code.claude.com/docs/en/skills) for Claude Code and other coding agents.
+A collection of [Agent Skills](https://code.claude.com/docs/en/skills) for Claude Code and other coding agents. Same `SKILL.md` files also work in Claude Desktop, Codex CLI, ChatGPT, Gemini CLI, and other tools that speak the open Agent Skills format.
 
 ## Install
 
