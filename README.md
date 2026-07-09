@@ -1,5 +1,8 @@
 # agent-skills
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-b083f0)](https://code.claude.com/docs/en/skills)
+
 A collection of [Agent Skills](https://code.claude.com/docs/en/skills) for Claude Code and other coding agents.
 
 ## Install
@@ -8,11 +11,27 @@ A collection of [Agent Skills](https://code.claude.com/docs/en/skills) for Claud
 npx skills add warstellar/agent-skills
 ```
 
-Or install a single skill directly by pointing at its folder — check the CLI's docs for the exact syntax (`npx skills --help`).
+Or install a single skill directly:
+
+```bash
+npx skills add warstellar/agent-skills --skill deslop
+```
+
+Check the CLI's docs for the full syntax (`npx skills --help`).
 
 ## Skills
 
 - **[deslop](skills/deslop/SKILL.md)** — detects, critiques, and rewrites text to remove AI writing patterns (word choice, rhythm, structural tells) so it reads like a specific, thoughtful human wrote it.
+
+  <details>
+  <summary>Example</summary>
+
+  | AI version | Human version |
+  |---|---|
+  | "This isn't just a tool. It's a revolution." | "This tool cut onboarding from 3 weeks to 4 days." |
+  | "serves as a critical component, ensuring seamless integration" | "is the piece that connects the two systems" |
+
+  </details>
 
 ## Adding a new skill
 

@@ -8,6 +8,7 @@ description: >
   "write a blog post / landing page / release note / announcement / marketing copy / product description".
   Also auto-apply when generating any text longer than ~3 sentences where quality matters.
   This skill should be consulted proactively — don't wait to be asked.
+license: MIT
 metadata:
   author: Ian Corvin
   version: "2.0"
