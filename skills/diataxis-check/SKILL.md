@@ -1,161 +1,339 @@
 ---
 name: diataxis-check
 description: >
-  Review one existing technical-documentation page or small fragment using the Diátaxis framework. Use when the user asks to check, audit, diagnose, classify, or improve documentation according to Diátaxis; identify whether content is primarily a tutorial, how-to guide, reference, or explanation; spot mixed documentation modes; or find the single most useful next Diátaxis improvement. Focus on the user need and documentation mode, not general prose quality or factual verification.
+  Review one existing technical-documentation page or small fragment using
+  Diátaxis as a content-design framework. Use when the user asks whether a
+  documentation page is well structured, logically scoped, organized around
+  the right user need, or appropriate for its audience; asks to audit or
+  improve a page according to Diátaxis; or wants to understand what is wrong
+  with a documentation topic and how to improve it. Diagnose page-level
+  content architecture and recommend the single most useful next improvement.
+  Do not treat Diátaxis classification itself as the goal.
 ---
 
 # Diátaxis Check
 
-Review one documentation page or small fragment through the Diátaxis framework. Diagnose what user need the content serves, whether its mode is coherent, and the single next change that would improve the fit.
+Review one existing documentation page or small fragment.
 
-Keep the review narrow. Do not turn it into a general documentation audit or a full rewrite.
+The goal is to determine whether the page is coherently organized around a
+real user need and whether its content and structure make sense for that need.
+
+Use Diátaxis as the reasoning framework. Classification into tutorial, how-to,
+reference, or explanation is an intermediate step that helps determine what
+the page should do. It is not the primary output.
+
+Focus on page-level content architecture and logic rather than prose quality,
+factual verification, or a comprehensive documentation redesign.
 
 ## Core model
 
-Classify by the user's need, not by surface format, headings, or apparent difficulty.
+Start with the user's situation, not the document's apparent format.
 
-Use the Diátaxis compass:
+Diátaxis distinguishes documentation along two dimensions:
 
-| Content primarily... | User is primarily... | Mode |
+| User need | Acquiring skill or understanding | Applying skill or knowledge |
 | --- | --- | --- |
-| guiding action | acquiring skill / studying | Tutorial |
-| guiding action | applying skill / working | How-to guide |
-| providing knowledge | applying skill / working | Reference |
-| providing knowledge | acquiring understanding / studying | Explanation |
+| **Action** | Tutorial | How-to guide |
+| **Cognition** | Explanation | Reference |
 
-Ask two questions:
+Ask:
 
-1. Is the user trying to **act** or to **understand/know**?
-2. Are they **acquiring** skill or **applying** skill they already have?
+1. Does the user primarily need to **do something**, or to **know or understand something**?
+2. Are they **acquiring** new competence or understanding, or **applying** existing competence while working?
 
-Use those answers to identify the dominant mode.
+Use the answer to infer what kind of document would best serve the user.
 
-## Mode criteria
+Then evaluate the actual page against that expectation.
+
+## What each mode implies
 
 ### Tutorial
 
-Treat content as a tutorial when its main job is to provide a successful learning experience through guided action.
+A tutorial serves a learner who is acquiring competence through guided action.
 
-Look for:
-- a learner who is acquiring competence;
-- a deliberately managed path rather than an open-ended real-world task;
-- concrete actions with visible, expected results;
-- enough guidance that a novice can stay oriented and successful;
-- minimal explanation and few or no optional branches.
+Expect:
 
-Do not classify something as a tutorial merely because it is basic. Advanced material can still be a tutorial if the user is studying rather than working.
+- a managed learning experience rather than a real-world task;
+- a clear path controlled by the tutorial;
+- concrete actions with visible results;
+- enough context to keep the learner oriented;
+- minimal branching and optionality;
+- only the explanation and reference material needed to support the lesson.
+
+A tutorial is not merely a beginner how-to. Its defining purpose is learning.
 
 ### How-to guide
 
-Treat content as a how-to guide when its main job is to help an already-competent user accomplish a real-world goal or solve a problem.
+A how-to guide serves a competent user trying to accomplish a real-world goal.
 
-Look for:
-- a specific practical goal;
-- directions that serve the user's work rather than teach the tool;
-- instructions focused on action, with explanation kept out of the way;
-- room for conditions, judgement, branches, or alternate paths when reality requires them;
-- omission of background or exhaustive reference material that is not needed to complete the task.
+Expect:
 
-Do not classify something as a how-to merely because it contains numbered steps. Ask whether those steps serve a real user goal or a learning experience.
+- a recognizable user goal;
+- content organized around completing that goal;
+- actionable directions;
+- prerequisites that are relevant to the task;
+- conditions and branches when the real task requires them;
+- supporting facts or explanation only where they help the user complete the work.
+
+A how-to guide can contain several steps, interfaces, or related sub-actions.
+The question is whether they form a coherent task from the user's point of view.
 
 ### Reference
 
-Treat content as reference when its main job is to provide authoritative technical information that users consult while working.
+Reference serves a user who needs authoritative information while working.
 
-Look for:
-- neutral description of the product, system, API, command, object, option, or behavior;
-- facts, lists, tables, parameters, constraints, warnings, and compact examples;
-- consistent patterns that make information easy to locate;
-- structure that reflects the thing being documented where appropriate;
-- little or no instruction, argument, teaching, or discursive explanation.
+Expect:
 
-Examples can illustrate reference material without turning it into a how-to guide.
+- factual, technical description rather than a guided task;
+- predictable lookup-oriented structure;
+- terminology, parameters, fields, constraints, options, tables, lists, or examples;
+- organization that reflects the product, API, system, or other machinery being described;
+- consistent patterns that make information easy to find.
+
+Reference may contain small examples or procedural hints, but its main job is
+to provide information for consultation.
 
 ### Explanation
 
-Treat content as explanation when its main job is to deepen understanding of a topic.
+Explanation serves a user who wants to understand a subject more deeply.
 
-Look for:
-- context, reasons, background, relationships, implications, or mental models;
-- discussion of why something works or why a choice was made;
-- comparison of alternatives or legitimate perspectives;
-- a topic that can be considered away from an immediate task;
-- discursive treatment rather than step-by-step instruction or neutral lookup information.
+Expect:
 
-Keep explanation bounded. If it starts giving procedural directions or cataloguing product facts, those parts may belong elsewhere.
+- context, reasons, relationships, implications, or mental models;
+- discussion of why something works or is designed a certain way;
+- alternatives, trade-offs, history, or background when relevant;
+- a coherent topic that can be understood through reading and reflection.
+
+Explanation may refer to practical work, but its main purpose is understanding,
+not completing that work.
 
 ## Review workflow
 
-Follow this sequence internally.
+Follow this reasoning internally.
 
-1. **Identify the likely user need.** Determine what the reader appears to be trying to accomplish, learn, look up, or understand. Infer from the supplied page when necessary; mark uncertainty instead of inventing context.
+### 1. Infer the page's user need
 
-2. **Apply the compass.** Decide action vs cognition, then acquisition vs application.
+Determine why someone would reasonably open this page.
 
-3. **Determine the dominant mode.** Use Tutorial, How-to guide, Reference, or Explanation. Use Mixed/unclear only when the page genuinely serves competing Diátaxis needs or no coherent dominant need can be supported.
+Look at the title, introduction, headings, actions, assumptions about the
+reader, and the content itself.
 
-   Do not classify a page as mixed merely because it contains multiple roles, audiences, goals, interfaces, or workflows. Those can all exist within the same Diátaxis mode.
+Try to express the need plainly, for example:
 
-4. **Check the page against that mode.** Look at its wording, structure, assumptions about the reader, and the kinds of material it includes.
+- configure session timeout;
+- learn how deployments work;
+- look up the parameters of an endpoint;
+- learn to create a first project.
 
-5. **Diagnose the most important problem.** Distinguish between:
-   - a **mode conflict**, where some material serves a different Diátaxis user need;
-   - a **scope, audience, or task-boundary problem**, where the material remains in the same mode but combines things that would serve users better separately;
-   - another documentation issue that Diátaxis helps expose but does not itself classify.
+If the page appears to serve several substantially different needs, note that.
+Do not invent a single purpose merely to make classification easier.
 
-   Do not force every problem into a Diátaxis category.
+### 2. Use Diátaxis to establish an expectation
 
-6. **Choose one next improvement.** Recommend the smallest change with the highest immediate value: remove, move, shorten, split, relabel, clarify, or add something specific.
+Apply the action/cognition and acquisition/application dimensions.
 
-If the user explicitly asks you to apply the fix, make only that focused change unless they ask for a broader rewrite.
+Determine the dominant mode that would best serve the inferred user need.
+
+Do this to establish an expected shape for the page, not merely to attach a
+label to it.
+
+Ask what follows from that classification:
+
+- If this is a how-to, is there a coherent real-world goal?
+- If this is a tutorial, does it provide a coherent learning experience?
+- If this is reference, is the material organized for reliable lookup?
+- If this is explanation, does it build understanding around a bounded topic?
+
+### 3. Compare the actual page with that expectation
+
+Inspect how the page is put together.
+
+Look especially for problems such as:
+
+- **Unclear purpose** — the page does not make clear what user need it serves.
+- **Scope that is too broad** — several independently useful tasks or subjects
+  have been bundled into one page without a strong reason.
+- **Task-boundary problems** — setup, administration, execution, maintenance,
+  troubleshooting, or other distinct jobs are combined in a way that makes the
+  user's path harder to follow.
+- **Audience or role mismatch** — different sections assume substantially
+  different permissions, knowledge, responsibilities, or goals.
+- **Structural mismatch** — the organization of the page does not match how
+  the user needs to work, learn, look information up, or build understanding.
+- **Mode mismatch** — the page is shaped like one kind of documentation while
+  the user's actual need calls for another.
+- **Mode conflict** — material serving a different Diátaxis need substantially
+  interrupts or competes with the page's dominant purpose.
+- **Poor placement of supporting material** — useful prerequisites, reference
+  details, explanation, warnings, or examples appear where they distract from
+  rather than support the main purpose.
+
+These are diagnostic possibilities, not boxes that must all be checked.
+
+A problem does not need to be a Diátaxis mode conflict to matter.
+
+### 4. Judge whether the page is coherent
+
+Consider the page as a whole.
+
+Ask:
+
+- Is there a clear reason for this page to exist?
+- Would the intended user recognize that reason?
+- Does the page mostly serve that need?
+- Does its scope make sense for that need?
+- Does the sequence and grouping of information help the user?
+- Are different tasks, roles, or modes combined for a useful reason, or merely
+  because they concern the same product or feature?
+
+Do not equate "about the same feature" with "belongs on the same page."
+
+Conversely, do not split content merely because it contains different roles,
+interfaces, sub-actions, or Diátaxis modes. Keep them together when they form a
+coherent experience for the user.
+
+### 5. Find the highest-value problem
+
+Identify the problem that most weakens the page's ability to serve its user.
+
+Do not produce a backlog of every possible improvement.
+
+Prefer the structural issue that explains the largest amount of friction.
+
+If the page is already coherent and appropriate for its purpose, say so rather
+than inventing a problem.
+
+### 6. Recommend one next improvement
+
+Recommend the smallest practical change that would meaningfully improve the
+page.
+
+Depending on the diagnosis, this might mean:
+
+- split one independent task into another page;
+- move background explanation elsewhere and link to it;
+- bring a prerequisite closer to the task it affects;
+- narrow or clarify the page's purpose;
+- reorganize sections around the user's workflow;
+- separate content intended for substantially different roles;
+- turn a feature catalogue into task-oriented pages;
+- restructure reference material for lookup;
+- remove material that does not serve the page's purpose.
+
+Explain why the change follows from the user need.
+
+If the user asks to apply the recommendation, make only that focused change
+unless they explicitly request a broader rewrite.
+
+## Distinguishing supporting content from real conflict
+
+Documentation does not need to be perfectly pure.
+
+A how-to can contain parameter definitions, constraints, expected results, or
+short explanations. A tutorial can contain reference facts. Reference can
+include examples. Explanation can point to practical procedures.
+
+Treat cross-mode material as a problem only when it meaningfully interferes
+with the dominant user need.
+
+For example, field definitions inside a configuration step are usually useful
+supporting reference material. They do not automatically justify moving the
+material to a separate reference page.
+
+The presence of another Diátaxis mode is evidence to inspect, not automatically
+a reason to split content.
 
 ## Guardrails
 
-- Do not force documentation into four top-level sections. Diátaxis modes describe user needs and forms of content, not a mandatory site navigation template.
-- Do not assume a page must be perfectly pure. Small amounts of another mode can support the dominant mode when they do not interrupt the user's purpose.
-- Multiple audiences, roles, goals, interfaces, or workflows do not by themselves make a document mixed-mode.
-- Do not call something a mode conflict unless the conflicting material actually serves a different Diátaxis user need.
-- Do not force ordinary scope, audience, information-architecture, or task-boundary problems into Diátaxis terminology. Name the problem plainly when that is more accurate.
-- Do not confuse tutorial vs how-to with beginner vs advanced. The distinction is study vs work.
-- Do not confuse reference vs explanation with short vs long. The distinction is lookup for work vs understanding through study or reflection.
-- Do not surface the Diátaxis classification just because you performed one internally. Mention the mode when it helps explain the problem or when the user asks for classification.
-- Do not grade the document numerically. Avoid invented scores such as "7/10 Diátaxis compliance."
-- Do not claim to verify factual accuracy, completeness, technical correctness, accessibility, SEO, grammar, or general style unless the user separately asks for those checks and provides enough evidence.
-- Do not turn the review into a comprehensive redesign. Prefer one meaningful improvement over a backlog of marginal suggestions.
-- If several pages are supplied, review one at a time unless the user explicitly asks for a batch or information-architecture review.
+- Evaluate one page or small fragment at a time unless the user explicitly asks
+  for a broader information-architecture review.
+- Do not force documentation into four top-level sections. Diátaxis describes
+  user needs and documentation forms, not a mandatory site structure.
+- Do not assume every page must contain exactly one action, role, or interface.
+  Judge whether the material forms a coherent whole for the user.
+- Do not call multiple roles, goals, or interfaces a Diátaxis mode conflict
+  unless they genuinely represent competing documentation needs.
+- Do not confuse tutorial vs how-to with beginner vs advanced. The distinction
+  is learning versus performing real work.
+- Do not confuse reference vs explanation with short versus long. The
+  distinction is consultation during work versus developing understanding.
+- Do not treat classification as the outcome of the review. Use it to reason
+  about what the page should do.
+- Do not grade Diátaxis compliance numerically.
+- Do not claim to verify factual accuracy, technical correctness,
+  completeness, accessibility, SEO, grammar, or prose style unless the user
+  separately asks for those checks and provides enough evidence.
+- Do not turn a page review into a comprehensive documentation redesign.
+- Do not recommend splitting content merely to achieve mode purity.
+- Do not invent problems when the page already serves its purpose well.
 
 ## Output
 
-Write the review as concise, natural editorial feedback, not as a diagnostic form.
+Write concise, natural editorial feedback rather than a diagnostic form.
 
-Lead with the main observation about how well the page serves the reader's need. Explain the most important problem using concrete evidence from the page, then recommend one practical next improvement.
+Start with the main conclusion about the page: what it appears to help the user
+do or understand, and whether the page is coherently built around that need.
 
-Use Diátaxis terminology when it genuinely helps explain the issue. Do not force the response into fixed fields such as "Dominant mode", "User need", "Mode conflict", or confidence levels.
+Explain the most important structural problem using concrete evidence from the
+page. Then recommend one practical next improvement and explain why it would
+better serve the user.
 
-If the main problem is not a Diátaxis mode conflict, say what it actually is: for example, mixed audiences, several tasks on one page, misplaced background material, or unclear scope.
+Use Diátaxis terminology when it makes the reasoning clearer, but do not force
+the response into fields such as "Dominant mode", "User need", "Mode conflict",
+or confidence levels.
 
-If the page already fits its purpose well, say so instead of inventing a problem.
+A useful review often sounds like:
 
-If the user explicitly asks for classification, a formal audit, or the reasoning through the Diátaxis compass, provide a more structured diagnosis.
-
-Keep the answer proportional to the source. Quote or point to short passages when that makes the feedback easier to verify.
-
-## Example
-
-Input excerpt:
-
-> # Download a topic as PDF
+> This is fundamentally a how-to, but the page combines the configuration of
+> the feature with the task of using it. Those jobs belong to different users
+> and happen at different moments, so someone who only wants to perform the
+> task has to work around setup material they may not even have permission to
+> use.
 >
-> First, an administrator must enable single-topic PDF downloads under **Settings > Branding > Reader Interface**.
->
-> Contributors can then open a topic in the editor and select **Download as PDF**.
->
-> Readers can also download the topic from the Reader UI using the PDF button.
+> I would move the administrative setup into its own how-to and leave this page
+> focused on the user action, with a short prerequisite linking to the setup
+> instructions.
 
-Review:
+The reasoning comes from Diátaxis, but the feedback should describe the actual
+documentation problem.
 
-This is essentially a how-to, but the bigger problem is not a Diátaxis mode conflict. The page combines setup work for an administrator with the actual download task for Contributors and Readers.
+If the user explicitly asks for classification, a formal Diátaxis audit, or an
+explanation of the reasoning, provide the underlying mode and compass analysis.
 
-Someone who arrives because they want to download a topic is forced through configuration steps they may not have permission to perform. The setup and the user action are both goal-oriented instructions, but they serve different people at different moments.
+## Examples
 
-I would split them into two how-to pages: one for configuring single-topic PDF downloads, and one for downloading a topic as PDF. The second page only needs a short note linking to the configuration instructions if the download option is unavailable.
+### Several how-to tasks on one page
+
+A page called **Visual Workflow Editor** explains how to install the editor,
+connect it to a portal, navigate its canvas, create and remove statuses, manage
+transitions, validate a workflow, import and export JSON, and apply changes.
+
+Do not manufacture a reference/how-to conflict merely because some sections
+define fields or describe interface behavior.
+
+Instead reason from the user need:
+
+The content is predominantly action-oriented work, but the page does not have
+a sufficiently clear task boundary. It acts as a collection of several
+independently useful how-to tasks simply because they concern the same tool.
+
+Recommend the highest-value structural separation, such as extracting an
+independent task or establishing a clear main workflow and moving optional
+operations to their own pages.
+
+### Genuine mode conflict
+
+A page called **Rotate an API key** gives the steps needed to replace a key,
+but between the steps contains several paragraphs explaining the history of
+the authentication model, why the product uses tokens, and alternative
+authentication architectures.
+
+The user's need is to complete a real-world task, so the expected mode is
+how-to.
+
+The explanatory material serves a different need and interrupts the task
+without being necessary to complete it. Recommend moving the deeper
+explanation to a separate explanation page and linking to it where useful.
+
+The problem is not that explanation appeared inside a how-to. The problem is
+that it competes with the user's immediate purpose.
