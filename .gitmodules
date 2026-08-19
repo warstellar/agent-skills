@@ -1,0 +1,3 @@
+[submodule ".sources/diataxis"]
+	path = .sources/diataxis
+	url = https://github.com/evildmp/diataxis-documentation-framework.git
