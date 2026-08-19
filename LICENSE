@@ -1,4 +1,16 @@
-MIT License
+# Licensing
+
+Unless otherwise stated in a skill's directory, the contents of this repository
+are licensed under the MIT License below.
+
+Individual skills may have their own `LICENSE` or `LICENSE.md` file. When a
+skill contains its own license file, that license applies to that skill instead
+of the repository default.
+
+Third-party material and adaptations remain subject to their respective
+licenses and attribution requirements.
+
+## MIT License
 
 Copyright (c) 2026 Ian Corvin
 

@@ -1,0 +1,27 @@
+# License and attribution
+
+`diataxis-check` is licensed under the
+Creative Commons Attribution-ShareAlike 4.0 International License
+(CC BY-SA 4.0):
+
+https://creativecommons.org/licenses/by-sa/4.0/
+
+## Attribution
+
+This skill is based on and adapts concepts and guidance from **Diátaxis**,
+created by **Daniele Procida**:
+
+https://diataxis.fr/
+
+Source repository:
+
+https://github.com/evildmp/diataxis-documentation-framework
+
+The Diátaxis documentation is licensed under CC BY-SA 4.0.
+
+This Agent Skill was adapted and condensed by **Ian Corvin** in 2026.
+
+The adaptation converts Diátaxis concepts and documentation guidance into
+instructions for an AI agent that reviews a single documentation page or
+fragment. It is not affiliated with or endorsed by the Diátaxis project or
+Daniele Procida.

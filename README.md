@@ -1,51 +1,108 @@
 # agent-skills
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-b083f0)](https://code.claude.com/docs/en/skills)
+[![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-b083f0)](https://agentskills.io/)
 
-A collection of [Agent Skills](https://code.claude.com/docs/en/skills) for Claude Code and other coding agents. Same `SKILL.md` files also work in Claude Desktop, Codex CLI, ChatGPT, Gemini CLI, and other tools that speak the open Agent Skills format.
+A collection of Agent Skills for Claude Code, Codex, ChatGPT, Gemini CLI, and other tools that support the open Agent Skills format.
 
 ## Install
+
+Install all skills from this repository:
 
 ```bash
 npx skills add warstellar/agent-skills
 ```
 
-Or install a single skill directly:
+Or install a single skill:
 
 ```bash
 npx skills add warstellar/agent-skills --skill deslop
 ```
 
-Check the CLI's docs for the full syntax (`npx skills --help`).
+```bash
+npx skills add warstellar/agent-skills --skill diataxis-check
+```
+
+Check the CLI docs for the full syntax:
+
+```bash
+npx skills --help
+```
 
 ## Skills
 
-- **[deslop](skills/deslop/SKILL.md)** — detects, critiques, and rewrites text to remove AI writing patterns (word choice, rhythm, structural tells) so it reads like a specific, thoughtful human wrote it.
+### deslop
 
-  <details>
-  <summary>Example</summary>
+Detects, critiques, and rewrites text to remove common AI-writing patterns so it reads like a specific, thoughtful human wrote it.
 
-  | AI version | Human version |
-  |---|---|
-  | "This isn't just a tool. It's a revolution." | "This tool cut onboarding from 3 weeks to 4 days." |
-  | "serves as a critical component, ensuring seamless integration" | "is the piece that connects the two systems" |
+It looks at word choice, rhythm, structure, formatting, vague claims, promotional language, and other recurring LLM writing habits.
 
-  </details>
+[View skill](skills/deslop/SKILL.md)
 
-## Adding a new skill
+<details>
+<summary>Example</summary>
 
-Each skill lives in its own folder under `skills/`:
+| AI version | Human version |
+|---|---|
+| "This isn't just a tool. It's a revolution." | "This tool cut onboarding from 3 weeks to 4 days." |
+| "serves as a critical component, ensuring seamless integration" | "is the piece that connects the two systems" |
 
+</details>
+
+### diataxis-check
+
+Reviews one technical-documentation page or fragment using the [Diátaxis](https://diataxis.fr/) framework.
+
+It identifies the user need and dominant documentation mode, spots meaningful mixing between tutorials, how-to guides, reference, and explanation, and recommends one concrete next improvement.
+
+[View skill](skills/diataxis-check/SKILL.md)
+
+Based on Diátaxis by Daniele Procida. See the skill's [license and attribution](skills/diataxis-check/LICENSE.md).
+
+## Repository structure
+
+Each skill lives in its own directory:
+
+```text
+skills/
+  <skill-name>/
+    SKILL.md
 ```
-skills/<skill-name>/SKILL.md
+
+A skill may also include supporting files when needed:
+
+```text
+skills/
+  <skill-name>/
+    SKILL.md
+    agents/
+    references/
+    scripts/
+    assets/
+    LICENSE.md
 ```
 
-`SKILL.md` must start with YAML frontmatter containing `name` and `description`.
+`SKILL.md` contains the skill's name, description, and instructions. The other files are optional and depend on what the skill needs.
 
-## License
+## Adding a skill
 
-[MIT](LICENSE)
+Create a directory under `skills/` and add a `SKILL.md` with YAML frontmatter:
+
+```yaml
+---
+name: example-skill
+description: Describe what the skill does and when an agent should use it.
+---
+```
+
+Keep skills self-contained where practical. Add references, scripts, or other files only when they materially improve the skill.
+
+## Licensing
+
+Unless otherwise stated in a skill's directory, the contents of this repository are licensed under the MIT License.
+
+Some skills are based on or adapted from third-party work and use different licenses. When a skill contains its own `LICENSE` or `LICENSE.md`, that license applies to the skill instead of the repository default.
+
+See [LICENSE.md](LICENSE.md).
 
 ## Author
 
