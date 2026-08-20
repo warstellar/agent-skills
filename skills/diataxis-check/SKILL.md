@@ -4,326 +4,409 @@ description: >
   Review one existing technical-documentation page or small fragment using
   Diátaxis as a content-design framework. Use when the user asks whether a
   documentation page is well structured, logically scoped, organized around
-  the intended reader's need, or appropriate for its audience; asks to audit
-  or improve a page according to Diátaxis; or wants to understand what is wrong
-  with a documentation topic and how to improve it. Infer the intended reader
-  and their need, use Diátaxis to establish the expected documentation mode,
-  consult the relevant mode-specific diagnostic guidance, diagnose page-level
-  content architecture, and recommend one high-value improvement. Do not treat
-  Diátaxis classification itself as the goal or claim general documentation
-  quality.
+  the intended reader's need, appropriate for its audience, or how it could be
+  improved according to Diátaxis. Infer the intended reader and their need,
+  use the Diátaxis compass to determine what kind of documentation would serve
+  that need, consult the relevant mode-specific diagnostic guidance, compare
+  the page with that model, identify the most important page-level problem,
+  and recommend one focused improvement. Classification is an intermediate
+  reasoning step, not the goal of the review.
 ---
 
 # Diátaxis Check
 
 Review one existing documentation page or small fragment.
 
-The goal is to determine whether the page is coherently designed around the
-need of its intended reader, and whether its scope, structure, and content make
-sense for that need.
+The goal is to determine:
 
-Use Diátaxis as the reasoning framework. Tutorial, how-to, reference, and
-explanation are models that establish what the page should do for its reader.
-Classification is an intermediate step, not the primary output.
+- what the page appears to help its intended reader do or understand;
+- what kind of documentation would best serve that need;
+- whether the page's scope, structure, and content support that purpose;
+- what single change would improve it most.
 
-Focus on page-level content architecture and logic rather than prose quality,
-factual verification, or comprehensive documentation redesign.
+Use Diátaxis as a reasoning framework, not as a compliance checklist.
 
 ## Terminology
 
 Keep these roles distinct:
 
-- **Requester** — the person asking for the documentation review.
+- **Requester** — the person asking for the review.
 - **Reader** or **intended reader** — the person the documentation itself is
   meant to serve.
 
-When reasoning about needs, goals, work, competence, or audience, refer to the
-documentation reader, not the requester.
+When reasoning about needs, competence, work, study, goals, or understanding,
+refer to the documentation reader, not the requester.
 
-## Core model
+## Scope
 
-Start with the intended reader's situation, not the document's apparent format.
+By default, review one page or a small supplied fragment.
 
-Diátaxis distinguishes documentation along two dimensions:
+Focus on page-level content design:
 
-| Reader need | Acquiring skill or understanding | Applying skill or knowledge |
+- purpose;
+- reader need;
+- scope;
+- grouping;
+- sequence or organization;
+- fit between the reader need and the documentation form;
+- placement of supporting material;
+- interruptions to the reader's current purpose.
+
+Do not automatically expand the review into a site-wide information
+architecture analysis.
+
+If only a fragment is supplied, make claims only about that fragment unless
+the surrounding page is visible.
+
+## Start from the reader situation
+
+Do not classify a page from its title, formatting, apparent difficulty, or
+presence of familiar elements such as steps, tables, examples, or conceptual
+prose.
+
+Start by asking what the intended reader needs from the documentation at this
+moment.
+
+The need is situational.
+
+An experienced practitioner can be studying something unfamiliar. A beginner
+can be performing real work. Do not equate tutorial with beginner or how-to
+with advanced.
+
+Try to state the need in reader terms.
+
+Prefer:
+
+- configure session timeout;
+- rotate an API key;
+- understand why deployments are immutable;
+- look up the parameters of an endpoint;
+- learn to create and deploy a first project.
+
+Avoid treating a product object as a reader need.
+
+For example:
+
+> Visual Workflow Editor
+
+names a product object.
+
+> Change a workflow and apply it to the portal
+
+describes a reader goal.
+
+## Use the Diátaxis compass
+
+Classify the reader situation along two dimensions:
+
+| | Acquisition / study | Application / work |
 | --- | --- | --- |
-| **Action** | Tutorial | How-to guide |
-| **Cognition** | Explanation | Reference |
+| **Action / doing** | Tutorial | How-to guide |
+| **Cognition / knowing** | Explanation | Reference |
 
-Ask:
+Ask both questions:
 
-1. Does the intended reader primarily need to **do something**, or to **know or
-   understand something**?
-2. Are they **acquiring** new competence or understanding, or **applying**
-   existing competence while working?
+1. Does the reader primarily need **action** or **cognition**?
+2. Is the reader **acquiring** skill or knowledge, or **applying** existing
+   skill or knowledge?
 
-Use the answer to infer what kind of documentation would best serve that
-reader.
+Use the terms as practical distinctions:
 
-Then use the relevant mode as a model for what the page's content architecture
-should accomplish.
+- **Action** — practical steps, doing, knowing how.
+- **Cognition** — theoretical or propositional knowledge, knowing that,
+  thinking.
+- **Acquisition** — study.
+- **Application** — work.
 
-## Mode references
+Do not decide from one axis alone.
 
-After inferring the likely mode, read the corresponding diagnostic model before
-evaluating the page in detail:
+For example:
 
-- **Tutorial** — [references/tutorial.md](references/tutorial.md)
-- **How-to guide** — [references/how-to.md](references/how-to.md)
-- **Reference** — [references/reference.md](references/reference.md)
-- **Explanation** — [references/explanation.md](references/explanation.md)
+- both tutorials and how-to guides concern action;
+- both how-to guides and reference serve work;
+- both reference and explanation concern cognition;
+- both tutorials and explanation serve study.
 
-Read the reference for the expected dominant mode, not all four by default.
+The second axis is often what resolves an apparent similarity.
 
-If the page genuinely appears to serve two competing reader needs and that
-distinction matters to the diagnosis, read the relevant second reference as
-well.
+## Apply the compass to both need and content
 
-If the intended need itself remains ambiguous between two modes, read both
-plausible references and use them to clarify the distinction.
+Use the compass in two separate ways.
 
-Use the references to derive concrete expectations for purpose, scope,
-structure, flow, boundaries, and supporting content.
+First, determine what the **reader needs**.
 
-Do not use them merely to prove that another Diátaxis mode is present.
+Then inspect what the **page actually does**.
+
+Do not assume that authorial intent, navigation placement, title, and actual
+content necessarily agree.
+
+A page can be called a tutorial while functioning as task guidance. A page
+placed under reference can contain a substantial conceptual discussion.
+
+The mismatch between the reader situation and the actual content is often more
+useful than the label itself.
+
+## Use the compass at the necessary scale
+
+Establish the page's primary job at whole-page level.
+
+When a particular section or passage appears to interfere with that job, apply
+the same distinctions locally.
+
+A page can contain local material that serves another Diátaxis need.
+
+Do not treat that fact alone as a defect.
+
+Ask whether the local material supports the page's primary job or creates a
+substantial competing need.
+
+## Load the relevant mode guidance
+
+After inferring the reader situation, read the corresponding diagnostic
+reference:
+
+- Tutorial — [references/tutorial.md](references/tutorial.md)
+- How-to guide — [references/how-to.md](references/how-to.md)
+- Reference — [references/reference.md](references/reference.md)
+- Explanation — [references/explanation.md](references/explanation.md)
+
+Read the expected dominant mode's reference before evaluating the page in
+detail.
+
+Do not read all four by default.
+
+Read a second reference when:
+
+- the reader need remains genuinely ambiguous between two modes;
+- the page substantially serves two competing needs;
+- a neighboring-mode distinction is necessary to diagnose the problem.
+
+Use the reference to establish concrete expectations for the page's purpose,
+scope, organization, reader assumptions, and boundaries.
 
 ## Review workflow
 
-Follow this reasoning internally.
+### 1. Infer the reader and the need
 
-### 1. Infer the intended reader and their need
+Use evidence from the page:
 
-Determine why someone would reasonably open this page.
+- title and introduction;
+- headings;
+- actions the reader is asked to perform;
+- information the reader is expected to consult;
+- questions the page appears to answer;
+- assumptions about existing competence;
+- expected outcome or understanding.
 
-Look at:
+If several substantial reader needs are present, preserve that finding rather
+than inventing one artificial purpose.
 
-- the title;
-- the introduction;
-- headings and section boundaries;
-- actions the page asks someone to perform;
-- assumptions about knowledge or competence;
-- roles and permissions;
-- the outcome or understanding the page appears to promise.
+### 2. Determine the expected mode
 
-Try to express the reader's need plainly, for example:
+Apply both compass dimensions to the reader situation.
 
-- configure session timeout;
-- understand why deployments behave this way;
-- look up the parameters of an endpoint;
-- learn to create a first project.
+Use the result to establish what kind of documentation should serve that need.
 
-Do not confuse a product feature with a reader need.
+Classification is a hypothesis about the page's obligations, not the review
+result.
 
-"Visual Workflow Editor" describes a thing.
-"Change a workflow and apply it to the portal" describes something a reader
-might need to accomplish.
+### 3. Read the relevant diagnostic model
 
-If several roles appear, ask whether they share one coherent need or represent
-different jobs.
+Load the corresponding reference.
 
-If the page appears to serve several substantially different needs, preserve
-that ambiguity. Do not invent a single purpose merely to make classification
-easier.
+Use it to establish what should determine:
 
-### 2. Use Diátaxis to establish the expected mode
+- the page's scope;
+- the page's structure;
+- the reader assumptions;
+- the type of progression or organization;
+- appropriate supporting material;
+- likely neighboring-mode failures.
 
-Apply the action/cognition and acquisition/application dimensions.
+### 4. Compare the page with the expected model
 
-Determine which mode would best serve the inferred reader need:
+Ask whether the page actually serves the inferred reader need in the way that
+this mode requires.
 
-- Tutorial
-- How-to guide
-- Reference
-- Explanation
+Look for concrete problems such as:
 
-Use the classification to establish an expectation about the document, not
-merely to attach a label to it.
+- the page has no stable reader need;
+- its scope follows a product or topic boundary that does not fit the reader
+  situation;
+- several independently meaningful tasks or subjects are bundled together;
+- the organization follows the wrong logic for learning, working, consulting
+  information, or building understanding;
+- the page assumes substantially different levels of competence in different
+  sections;
+- a supporting passage creates a substantial competing reader need;
+- material appears substantially before or after the point where the reader
+  needs it;
+- the page requires avoidable switching, backtracking, or interruption of the
+  reader's current purpose.
 
-### 3. Load the diagnostic model
+Do not force every problem into the category of "mode mixing."
 
-Read the corresponding mode reference.
+A page can be structurally weak while remaining entirely within one Diátaxis
+mode.
 
-Use it to determine what follows from this reader situation:
+### 5. Check why the material belongs together
 
-- what should organize the page;
-- what belongs inside its scope;
-- what kind of sequence or structure makes sense;
-- what assumptions about the reader are appropriate;
-- what supporting material is useful;
-- what common structural failures to look for.
+Ask why the page's major sections form one page.
 
-Do not read every mode reference for completeness.
+A shared product feature, interface, object, or technical area is not by
+itself sufficient reason.
 
-### 4. Compare the actual page with the expected model
+Check whether the grouping follows from the relevant reader need and mode.
 
-Evaluate the actual content architecture against the expectations derived from
-the reader's need and the relevant mode reference.
+Conversely, do not split a page merely because it contains:
 
-Do not ask merely whether the page "looks like" a tutorial, how-to, reference,
-or explanation.
+- several actions;
+- several interfaces;
+- several examples;
+- several roles;
+- local material from another mode.
 
-Ask whether it serves the reader in the way that this kind of documentation
-should.
+The question is whether those elements form one coherent experience for the
+intended reader.
 
-Look for structural problems such as:
+### 6. Distinguish support from interference
 
-- **Unclear purpose** — there is no clear reader need around which the page is
-  organized.
-- **Scope that is too broad** — several independently useful tasks or subjects
-  have been bundled together without a strong reader-centered reason.
-- **Task-boundary problems** — setup, administration, execution, maintenance,
-  troubleshooting, or other distinct jobs are combined in a way that weakens
-  the reader's path.
-- **Audience or role mismatch** — different sections assume substantially
-  different permissions, competence, responsibilities, or goals.
-- **Structural mismatch** — the organization follows the wrong logic for how
-  the reader needs to work, learn, look information up, or build understanding.
-- **Mode mismatch** — the page's form does not fit the reader need it appears
-  intended to serve.
-- **Mode conflict** — material serving another Diátaxis need substantially
-  interrupts or competes with the dominant reader need.
-- **Poor placement of supporting material** — useful prerequisites, facts,
-  explanations, warnings, examples, or alternatives appear where they disrupt
-  rather than support the page's purpose.
+Material from another mode can be useful support.
 
-These are diagnostic possibilities, not boxes that must all be checked.
+Examples:
 
-A page can be structurally weak without containing a Diátaxis mode conflict.
+- concise parameter information inside a how-to;
+- a short reason inside a tutorial;
+- a usage example inside reference;
+- factual examples inside explanation.
 
-### 5. Judge the page as a coherent unit
+Treat such material as a problem only when it substantially changes or
+interrupts what the reader is there to do.
 
-Consider why this material belongs together.
+Typical signs include:
 
-Ask:
+- the reader must stop performing work and begin studying a separate subject;
+- lookup information is obscured by discussion;
+- a learner must process an extended conceptual digression before continuing;
+- an explanation turns into a complete practical procedure;
+- a supporting passage grows into an independently useful document.
 
-- Is there a clear reason for this page to exist?
-- Would the intended reader recognize that reason?
-- Does the page mostly serve that need?
-- Does its scope make sense for that need?
-- Does the grouping of information support the reader's situation?
-- Does the sequence follow the logic appropriate to this mode?
-- Are different tasks, roles, topics, or modes combined because the reader
-  benefits from having them together?
-- Or are they grouped merely because they concern the same product, feature,
-  interface, or technical area?
+Do not recommend moving material solely to achieve mode purity.
 
-Do not equate "about the same feature" with "belongs on the same page."
+### 7. Identify the highest-value problem
 
-Conversely, do not split material simply because several roles, interfaces,
-sub-actions, or modes are present. Keep them together when they form a coherent
-experience for the reader.
+Prefer a root problem that explains several symptoms.
 
-### 6. Find the highest-value problem
+For example:
 
-Identify the structural problem that most weakens the page's ability to serve
-its intended reader.
-
-Prefer a root problem over its symptoms.
-
-For example, several awkward sections may all follow from one deeper problem:
-the page is organized around product features instead of the reader's task.
+- repeated awkward sections may follow from organizing a how-to around product
+  features instead of a human project;
+- missing expected results may reveal that a tutorial is being treated as a
+  procedure rather than a managed learning experience;
+- difficult lookup may follow from reference being written as continuous
+  explanatory prose.
 
 Do not produce a backlog of every possible improvement.
 
-If the page already has a coherent purpose and architecture for its reader,
-say so rather than inventing a problem.
+If the page already serves its reader coherently, say so.
 
-### 7. Recommend one next improvement
+### 8. Recommend one next improvement
 
-Recommend the smallest practical change that would meaningfully improve the
-page.
+Choose one bounded change that would produce a meaningful improvement.
 
-Depending on the diagnosis, this might mean:
+Possible changes include:
 
 - clarify or narrow the reader need;
 - split an independent task into another page;
-- reorganize sections around the reader's workflow;
-- move one-time setup out of a recurring task;
-- separate material intended for substantially different roles;
-- turn a feature-oriented collection into task-oriented guidance;
-- restructure reference material for predictable lookup;
-- move substantial explanation out of an action-oriented flow;
+- reorganize a how-to around the reader's project;
+- repair a missing tutorial action/result checkpoint;
+- restructure reference around the machinery it describes;
 - bound an explanation around a clearer conceptual question;
-- remove or relocate material that does not serve the page's purpose.
+- move a substantial digression out of the reader's immediate flow;
+- relocate a prerequisite or decision to the point where it is needed.
 
-Explain why the change follows from the intended reader's need.
+Explain why the recommendation follows from the reader situation.
 
-If the requester asks to apply the recommendation, make only that focused
-change unless they explicitly request a broader rewrite.
+Do not turn the review into a complete redesign unless the requester asks for
+one.
 
-## Supporting content and mode boundaries
+## Treat friction as evidence, not proof
 
-Documentation does not need to be perfectly mode-pure.
+If a page is unusually difficult to classify or organize, or if supposedly
+appropriate material repeatedly feels hard to place, reconsider the reader
+need and expected mode.
 
-A how-to can contain field definitions, constraints, expected results, or short
-explanations. A tutorial can contain reference facts. Reference can include
-examples. Explanation can mention practical consequences.
+Do not use intuition alone to override the compass.
 
-Treat cross-mode material as a problem only when it meaningfully interferes
-with the dominant reader need.
+At the same time, do not manufacture a mode conflict merely because a passage
+looks superficially different.
 
-The presence of another Diátaxis mode is evidence to inspect, not automatically
-a reason to move or split content.
+Use the reader situation to resolve the ambiguity.
 
-Use the relevant mode reference to judge whether supporting material helps or
-disrupts the page's purpose.
+## Diátaxis is not a required top-level structure
 
-## Guardrails
+Do not require documentation to contain four top-level sections named
+Tutorials, How-to, Reference, and Explanation.
 
-- Evaluate one page or small fragment at a time unless the requester explicitly
-  asks for a broader information-architecture review.
-- If only a fragment is provided, do not make unsupported claims about the
-  architecture of the unseen page.
-- Do not force documentation into four top-level sections. Diátaxis describes
-  reader needs and documentation forms, not a mandatory site structure.
-- Do not assume every page must contain exactly one action, role, interface, or
-  technical component.
-- Do not call multiple roles, tasks, or interfaces a Diátaxis mode conflict
-  unless they genuinely represent competing reader needs.
-- Do not confuse tutorial vs how-to with beginner vs advanced. The distinction
-  is learning versus performing real work.
-- Do not confuse reference vs explanation with short versus long. The
-  distinction is consultation during work versus developing understanding.
-- Do not treat classification as the outcome of the review. Use it to reason
-  about what the page should do.
-- Read only the mode references needed for the current diagnosis.
-- Do not recommend splitting material merely to achieve mode purity.
-- Do not grade Diátaxis compliance numerically.
-- Do not claim to verify factual accuracy, technical correctness,
-  completeness, accessibility, SEO, grammar, or prose style unless the
-  requester separately asks for those checks and provides enough evidence.
-- Do not turn a page review into a comprehensive documentation redesign.
-- Do not invent problems when the page already serves its intended reader well.
+Do not recommend creating empty mode sections merely to reproduce the map.
+
+Diátaxis can be applied locally to existing documentation.
+
+For this skill, improve the material in front of you rather than designing an
+ideal complete documentation system.
+
+## Quality limits
+
+Diátaxis does not verify functional qualities such as:
+
+- factual accuracy;
+- technical correctness;
+- completeness;
+- consistency with the product;
+- precision.
+
+It also does not replace accessibility, SEO, visual design, UX, or other
+specialist review.
+
+Applying Diátaxis can expose signs of functional-quality problems.
+
+For example, a reference structure may reveal an apparent coverage gap, or
+removing explanation from a tutorial may reveal that the learner was expected
+to infer a missing step.
+
+Treat such findings as evidence of a possible problem, not as verification.
+
+This skill can judge fit to reader needs, mode-specific content design, and
+reader flow. These require judgement rather than numerical measurement.
+
+Do not assign a Diátaxis compliance score or percentage.
+
+Do not claim that correct use of Diátaxis proves general documentation
+quality.
 
 ## Output
 
-Write concise, natural editorial feedback rather than a diagnostic form.
+Write concise, natural editorial feedback.
 
-Start with the main conclusion about the page: what it appears to help its
-intended reader do or understand, and whether the page is coherently built
-around that need.
+Start with the page's apparent reader need and whether the page is coherently
+designed around it.
 
-Explain the most important structural problem using concrete evidence from the
-page.
+Then explain the most important problem using concrete evidence from the page.
 
-Then recommend one practical next improvement and explain why it would better
-serve the intended reader.
+Recommend one practical next improvement and explain why it would better serve
+the intended reader.
 
-Use Diátaxis terminology when it genuinely clarifies the diagnosis, but do not
-force the response into fixed fields such as:
+Use Diátaxis terminology when it clarifies the diagnosis, but do not force the
+response into fields such as:
 
 - Dominant mode
-- User need
+- Reader need
 - Mode conflict
 - Confidence
+- Compliance score
 
 Do not narrate the internal process of loading references or applying the
-compass unless the requester asks for that reasoning.
-
-The feedback should describe the actual documentation problem, not celebrate
-the detection of a Diátaxis violation.
+compass.
 
 If the requester explicitly asks for classification, a formal Diátaxis audit,
-or an explanation of the reasoning, provide the underlying mode and compass
-analysis.
+or the underlying reasoning, provide the compass and mode analysis.

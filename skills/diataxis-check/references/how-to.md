@@ -1,52 +1,26 @@
 # How-to diagnostic model
 
-Read this file after `SKILL.md` has inferred that the intended documentation
-reader primarily needs to act while applying existing competence: the reader is
-doing real work and wants to achieve a practical result.
+Use this reference when the intended reader is applying existing competence
+through action: the reader is at work and needs help accomplishing a
+real-world task, goal, project, or problem.
 
-Use this as diagnostic guidance for reviewing a page. It is not a complete
-writing guide for creating how-to documentation from scratch.
+A how-to guide is defined by the reader's practical project, not by the
+product feature used to accomplish it.
 
-## Reader situation
+## Establish the human project
 
-A how-to guide serves a reader who:
+Identify the result the reader is trying to achieve.
 
-- already has enough competence to work in the domain;
-- knows what they are trying to accomplish;
-- faces a real task, problem, project, or desired result;
-- needs guidance that helps them move through that real-world situation.
+Express it as a human task or problem, not merely as a product operation.
 
-The reader's project defines the guide.
+Prefer:
 
-The product, feature, interface, API, command, or tool is normally a means to
-that end, not the reason the guide exists.
+- configure session timeout for an organization;
+- rotate credentials without interrupting service;
+- publish a workflow change;
+- recover a failed deployment.
 
-## Expected content architecture
-
-A good how-to guide:
-
-- addresses a recognizable real-world goal or problem;
-- is organized from the reader's perspective rather than the machinery's;
-- includes actions that help reach the desired result;
-- assumes ordinary competence instead of teaching fundamentals;
-- accommodates conditions, branches, judgement, and variation when the real
-  task requires them;
-- starts and ends at meaningful points in the reader's work;
-- prefers practical usefulness over exhaustive coverage;
-- orders actions according to the logic of the reader's work and thinking;
-- maintains flow by avoiding unnecessary detours and context switches;
-- makes clear what practical problem or outcome it addresses.
-
-A how-to does not need to be a rigid linear procedure.
-
-Real work can branch, overlap, have multiple entry and exit points, and require
-judgement.
-
-## User goal versus product structure
-
-Pay special attention to what determines the page's structure.
-
-A page organized as:
+Be suspicious of scopes that merely reproduce product capabilities:
 
 - Statuses
 - Transitions
@@ -55,137 +29,313 @@ A page organized as:
 - Export
 - Settings
 
-may simply mirror the capabilities or structure of a tool.
+Those sections may all be valid product concepts, but they do not establish a
+single how-to guide.
 
-That can be appropriate for reference.
+Ask what reader project makes them belong together.
 
-For a how-to, ask what reader project makes those sections belong together.
+## Let the project define scope
 
-A good how-to may cross several screens, features, tools, or subsystems when
-the reader's goal requires it.
+The reader's project determines what the guide must cover.
 
-Conversely, several operations in the same feature do not automatically form
-one coherent how-to.
+A how-to may stay inside one feature when the task naturally aligns with that
+feature.
 
-The key question is not:
+It may also cross:
 
-> What can this feature do?
+- several features;
+- several interfaces;
+- several tools;
+- several technical subsystems;
 
-It is:
+when accomplishing the reader's goal requires them.
 
-> What is the reader trying to get done?
+Do not force how-to boundaries to match product boundaries.
+
+Conversely, several operations do not belong on one page merely because the
+same feature exposes them.
+
+If sections have independent entry points, outcomes, or moments of use, check
+whether they are actually separate how-to tasks.
+
+## Do not narrate the machinery
+
+Instructions can look procedural while providing little task guidance.
+
+Flag steps that merely tell a competent reader to operate an obvious control
+for its obvious effect when that information does not help solve the reader's
+problem.
+
+For example, the useful question may be:
+
+> Which option should I use in this situation?
+
+rather than:
+
+> Where is the option and how do I click it?
+
+The product is normally a means to the reader's end.
+
+Do not treat operation of the product as a meaningful goal by itself unless
+that operation really is the reader's project.
+
+## Assume relevant competence
+
+A how-to guide serves a reader who is already able to work in the domain.
+
+Do not require it to teach foundational competence merely because some readers
+might lack it.
+
+The guide can normally assume familiarity with ordinary tools, terminology,
+and basic operations appropriate to the task.
+
+Need for detailed guidance does not imply lack of competence.
+
+An expert may still consult a detailed how-to to make sure a task is performed
+correctly.
+
+If the page spends substantial effort creating foundational competence, check
+whether tutorial material has entered the guide.
+
+## Represent real-world variability
+
+A how-to guide operates in real work, where the writer cannot control all
+conditions in advance.
+
+Do not require every valid how-to to be one rigid linear procedure.
+
+Check whether the real task includes:
+
+- different starting conditions;
+- conditional branches;
+- alternative valid routes;
+- exceptions;
+- known disruptions;
+- decisions;
+- practitioner judgement.
+
+When such variation materially affects the task, the guide should expose
+enough decision logic for a competent reader to choose an appropriate route.
+
+Do not solve this by enumerating every theoretically possible case.
+
+The goal is adaptable guidance, not exhaustive case coverage.
+
+## Check the sequence against the work
+
+A how-to still needs a meaningful progression.
+
+Do not evaluate the sequence from an abstract claim that "the order should
+make sense."
+
+Check concrete ordering constraints.
+
+### Dependencies
+
+If one action requires another to have happened first, the guide should reflect
+that dependency.
+
+Flag prerequisites introduced after the reader already needed them.
+
+### Preparation
+
+Even when two actions are technically interchangeable, one may need to appear
+first because it prepares:
+
+- the working environment;
+- information needed for a later decision;
+- the reader's understanding of the immediate task.
+
+Do not reorder steps without evidence from the task.
+
+### Context switching
+
+Flag repeated switching between tools, interfaces, roles, or unrelated
+concerns when the switching results from page organization rather than from
+the task itself.
+
+### Unresolved decisions
+
+Flag information or decisions introduced substantially before the reader can
+act on them when that forces the reader to remember unresolved concerns across
+many intervening steps.
+
+### Backtracking
+
+Inspect jumps back to an earlier concern.
+
+Backtracking is not automatically wrong.
+
+Treat it as a structural problem when it exists only because the guide
+introduced or ordered material badly.
+
+### Information timing
+
+Place prerequisites, warnings, decision criteria, and supporting facts near
+the point where the reader needs them.
+
+Do not require all prerequisites or background information to appear at the
+top when doing so separates them unnecessarily from their use.
+
+## Prefer practical usability over exhaustive coverage
+
+A how-to does not need to cover the reader's complete end-to-end workflow.
+
+It may begin from a meaningful existing state and stop when the stated task has
+been accomplished sufficiently.
+
+A competent reader can join the guide to surrounding work.
+
+Do not use this principle to excuse gaps inside the task the page claims to
+solve.
+
+The documented route still needs to provide a viable solution for the stated
+situation.
+
+## Distinguish how-to from tutorial
+
+Both modes guide action.
+
+Use work versus study as the decisive distinction.
+
+A how-to:
+
+- assumes relevant competence;
+- serves an actual task;
+- can rely on implicit familiarity;
+- operates under real-world conditions;
+- may branch;
+- can require practitioner judgement;
+- cannot fully manage what happens.
+
+A tutorial:
+
+- creates competence;
+- constructs a learning experience;
+- deliberately familiarizes the learner with tools and processes;
+- controls conditions where possible;
+- minimizes choices;
+- carries more responsibility for the reader's successful path.
+
+Do not classify by difficulty.
+
+Do not assume detailed steps imply tutorial.
+
+Do not assume an experienced reader can never be in a tutorial situation.
+
+## Use supporting material only when it helps the work
+
+A how-to can contain:
+
+- concise parameter information;
+- constraints;
+- warnings;
+- expected results;
+- brief reasons;
+- small examples.
+
+Do not classify these automatically as mode conflicts.
+
+Treat supporting material as a problem when it:
+
+- interrupts progress toward the task;
+- grows into an exhaustive catalogue;
+- requires the reader to stop working and study another subject;
+- exists mainly because the author wants the page to be complete;
+- becomes an independently useful reference or explanation.
+
+Link to deeper material when it is important but not part of the task flow.
+
+## Check the title and opening
+
+The reader should be able to identify the practical problem or result the page
+addresses.
+
+A bare topic title such as:
+
+> Application performance monitoring
+
+does not establish a how-to purpose.
+
+A page title does not need to use the literal words "How to", but it should
+make the task sufficiently clear.
+
+Do not classify from title alone; use it as evidence about intended scope.
 
 ## Diagnostic questions
 
 Ask:
 
-- What concrete result is the reader trying to achieve?
-- Can that result be described as a human task or problem rather than merely as
-  operating a feature?
-- Is the page organized around that result?
-- Does every major section help advance the same reader project?
-- Are several independent tasks grouped together merely because they use the
-  same product area?
-- Does the guide begin where this reader reasonably needs guidance?
-- Does it stop when the practical task has been sufficiently served?
-- Are prerequisites relevant to this reader and this task?
-- Does the sequence follow the reader's work and thinking?
-- Does the page force unnecessary switching between roles, tools, contexts, or
-  concerns?
-- Is material included because it helps the reader act, or merely for
-  completeness?
-- Where real situations vary, does the guidance allow enough branching or
-  judgement to remain useful?
+- What practical result is the reader trying to achieve?
+- Can the result be described without merely naming a feature?
+- Does that project determine the page's scope?
+- Are major sections together because the task needs them together?
+- Are independent tasks bundled because they share a product area?
+- Does the guide explain useful decisions rather than merely narrate controls?
+- Does it assume appropriate working competence?
+- Does it accommodate real variation that materially affects the task?
+- Has real branching been forced into a false linear procedure?
+- Are dependencies represented in the correct order?
+- Are prerequisites introduced before they are needed?
+- Does the page create avoidable context switching?
+- Does it introduce decisions too early?
+- Does it cause avoidable backtracking?
+- Is supporting information located near its use?
+- Is exhaustive coverage interfering with practical usability?
 
-## Common failure patterns
+## Common structural failures
 
 ### Feature tour disguised as how-to
 
-The page enumerates things that can be done with a product or interface without
-connecting them to a meaningful reader goal.
-
-The operations may all be valid.
-
-Their shared relationship to the product does not establish a shared reader
-task.
+The page enumerates product operations without a coherent human project.
 
 ### Several independent tasks on one page
 
-Each section solves a useful practical problem, but the sections have different
-entry points, outcomes, or moments in the reader's work.
+Each section is useful, but the sections solve different problems or are used
+at different moments.
 
-The page becomes a collection of how-to guides rather than one coherent guide.
+### Obvious interface narration
 
-### Setup mixed with routine work
+The guide describes controls that a competent reader can already operate
+without connecting those actions to a real-world decision or outcome.
 
-Installation, initial configuration, permissions, or administration is embedded
-inside a task performed repeatedly by another reader or at another stage.
+### Tutorial material inside work guidance
 
-Treat this as a problem when setup interrupts the normal work rather than
-serving as a concise prerequisite.
+The page teaches basic competence instead of supporting application of
+existing competence.
 
-### Instructions without meaningful purpose
+### Artificially linear guidance
 
-The page tells an already-competent reader how to operate obvious controls or
-move the system through its motions without connecting those actions to a
-real-world problem.
+The task requires conditional reasoning or alternative routes, but the guide
+pretends one procedure fits every real case.
 
-### Completeness over usability
+### Exhaustive product coverage
 
-Options, background facts, feature descriptions, and edge cases accumulate
-because the author wants the page to cover everything related to the feature.
+Options, background, and feature information accumulate because they concern
+the same product area rather than because the reader needs them for the task.
 
-A how-to needs enough information to be useful in real work, not everything
-that can be said about the machinery.
+### Broken work sequence
 
-### Broken flow
-
-The ordering may be technically valid but poorly aligned with the reader's
-actual work.
-
-Look for:
-
-- unnecessary context switching;
-- jumping back to earlier concerns;
-- prerequisites discovered too late;
-- information that must be remembered for too long before it becomes useful;
-- sequences organized for the system rather than for the reader.
-
-## Supporting content and boundaries
-
-Reference facts, constraints, warnings, expected results, and short
-explanations can support a how-to when they help the reader make progress.
-
-Their presence is not automatically a mode conflict.
-
-Treat supporting material as a problem when it:
-
-- interrupts progress toward the practical goal;
-- exists mainly for completeness;
-- asks the reader to stop working and study a different subject;
-- grows large enough to represent an independent information or understanding
-  need.
-
-Link to deeper reference or explanation when appropriate.
+The page causes late prerequisites, avoidable switching, premature decisions,
+or unnecessary backtracking.
 
 ## Recommendation patterns
 
-Prefer recommendations that restore the connection between the page and the
-reader's real work.
+Prefer one change that reconnects the page with the reader's real work, for
+example:
 
-Depending on the diagnosis, recommend one high-value change such as:
+- redefine the page around one concrete project;
+- split an independent task into its own guide;
+- reorganize feature-oriented sections around the reader's workflow;
+- remove obvious interface narration;
+- add decision guidance for a real-world branch;
+- move exhaustive option information to reference;
+- move extended conceptual discussion to explanation;
+- reorder a late prerequisite;
+- move a decision closer to the point where it is needed;
+- reduce avoidable context switching or backtracking.
 
-- redefine the page around a concrete reader goal;
-- split independent tasks into separate how-to guides;
-- reorganize sections around the reader's workflow rather than feature
-  categories;
-- move one-time setup out of a recurring task;
-- remove obvious system-operation detail that does not help solve the problem;
-- move exhaustive reference information elsewhere;
-- reorder actions to improve flow;
-- clarify the title so it states the task or outcome.
+Do not redesign the guide merely to make it mode-pure.
 
-Do not recommend changes merely to make the page more mode-pure.
-
-The criterion is whether the guide helps a competent reader accomplish the
-real task effectively.
+Judge whether a competent reader can use it effectively to accomplish the
+real-world task.

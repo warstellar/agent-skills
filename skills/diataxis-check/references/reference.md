@@ -1,183 +1,304 @@
 # Reference diagnostic model
 
-Read this file after `SKILL.md` has inferred that the intended documentation
-reader primarily needs cognition while applying existing knowledge: the reader
-is working and needs reliable information to consult.
+Use this reference when the intended reader needs theoretical or propositional
+knowledge while applying existing competence: the reader is at work and needs
+reliable information to consult.
 
-Use this as diagnostic guidance for reviewing a page. It is not a complete
-reference-authoring standard.
+Reference primarily describes the machinery.
 
-## Reader situation
+It is not organized around one particular reader project.
 
-Reference serves a practitioner who:
+## Establish the lookup need
 
-- is already engaged in work;
-- knows roughly what information they need;
-- needs facts about a product, system, API, command, object, option, or other
-  machinery;
-- expects to find the information quickly;
-- expects to be able to rely on what they find.
+Ask what information the working reader needs to know.
 
-Reference is consulted rather than followed as a journey.
+Typical reference subjects include:
 
-Unlike tutorials and how-to guides, reference is normally led by the structure
-of the thing being described rather than by a human project.
-
-## Expected content architecture
-
-Good reference:
-
-- describes the machinery clearly and authoritatively;
-- states facts, behavior, constraints, options, parameters, relationships,
-  limitations, and warnings;
-- uses neutral and factual language;
-- is organized predictably;
-- follows consistent patterns;
-- mirrors the logical or conceptual structure of the system where that helps
-  readers navigate it;
-- makes relevant information easy to locate;
-- uses examples when they efficiently illustrate the thing being described;
-- avoids becoming a task guide or conceptual discussion.
-
-Its primary job is dependable description.
-
-## Product structure can be the right structure
-
-Reference is the Diátaxis mode in which product-oriented organization is often
-appropriate.
-
-Sections such as:
-
+- APIs;
 - endpoints;
 - classes;
+- methods;
 - commands;
 - configuration fields;
-- object properties;
-- status types;
+- flags;
+- properties;
+- values;
 - events;
-- error codes
+- error codes;
+- constraints;
+- system behavior.
 
-may be useful precisely because the documentation reflects the machinery the
-reader needs to inspect.
+The same reference information can support several different reader tasks.
 
-Do not automatically criticize reference for being feature-oriented.
+Do not require the page to be organized around one of those tasks merely
+because the information will be used during work.
 
-Instead ask whether the structure helps a working reader locate and understand
-the relevant facts.
+## Distinguish description from task guidance
 
-Consistency matters strongly.
+Reference can describe:
 
-Similar things should expose similar kinds of information in similar places.
+- what something is;
+- what it does;
+- how it behaves;
+- what values it accepts;
+- what constraints apply;
+- how it is correctly used.
+
+Describing correct use does not automatically make content a how-to guide.
+
+The boundary is crossed when the material begins leading the reader through a
+human project.
+
+Compare:
+
+> `timeout` accepts values from 30 to 3600 seconds.
+
+with:
+
+> To reduce idle sessions across your organization, first change the global
+> timeout, then...
+
+The first describes the machinery.
+
+The second begins guiding a task.
+
+## Let the machinery help define scope
+
+Reference is legitimately product-led.
+
+The technical object being described can determine the page's scope and
+organization.
+
+Check whether meaningful relationships in the system are reflected in the
+documentation.
+
+For example:
+
+- related commands can share a predictable structure;
+- properties can appear under the objects they belong to;
+- API resources can reflect meaningful API relationships.
+
+Do not convert reference into task-oriented organization simply because
+reader-centered organization is appropriate for how-to guides.
+
+## Do not mirror implementation mechanically
+
+"Follow the machinery" does not mean reproducing every internal implementation
+detail.
+
+Use logical and conceptual relationships that help the reader understand and
+navigate the documented system.
+
+Flag literal implementation mirroring when it creates an unnatural structure
+for the documented technical surface.
+
+The goal is correspondence that helps consultation, not duplication of source
+code layout.
+
+## Optimize for consultation
+
+Reference is normally consulted rather than read as a narrative.
+
+Check whether a reader can locate a particular fact without reading the page
+from the beginning.
+
+Use predictable structure.
+
+For related entities, check whether equivalent kinds of information appear:
+
+- under consistent headings;
+- in a consistent order;
+- using consistent terminology;
+- in familiar formats.
+
+Do not introduce structural or vocabulary variation merely for stylistic
+variety.
+
+Predictability is a feature of reference.
+
+## Separate authoritative facts from interpretation
+
+Reference should make it clear what the documented technical reality is.
+
+Flag material that makes the reader separate facts from:
+
+- opinion;
+- speculation;
+- persuasion;
+- marketing;
+- extended interpretation;
+- discursive argument.
+
+This does not mean every sentence must sound identical or artificially terse.
+
+The diagnostic issue is whether authoritative information remains direct and
+unambiguous.
+
+## Treat normative language correctly
+
+Words such as:
+
+- must;
+- must not;
+- never;
+- required;
+
+do not automatically indicate how-to instruction.
+
+They are appropriate in reference when they state actual requirements,
+constraints, valid states, or rules of correct use.
+
+Classify the function of the statement, not its grammatical mood.
+
+## Use examples as illustration
+
+Examples can belong in reference.
+
+A good reference example makes the described technical element easier to
+recognize or understand in context.
+
+Keep an example in reference when it primarily illustrates:
+
+- syntax;
+- a value;
+- a command;
+- a valid structure;
+- a concise usage form.
+
+Check for boundary drift when the example expands into:
+
+- a sequence for accomplishing a human goal;
+- reasons why the system was designed this way;
+- historical development;
+- what-if exploration;
+- a broader conceptual discussion.
+
+Illustration is compatible with reference.
+
+A task or an explanation is a different reader need.
+
+## Distinguish reference from explanation
+
+Both reference and explanation concern cognition.
+
+Do not decide between them from subject matter alone.
+
+Use the reader's relationship to the work.
+
+Reference serves a reader who needs information while applying knowledge in
+work.
+
+Explanation serves a reader who has stepped back from immediate work to study,
+reflect, and understand.
+
+Use this test when a factual or conceptual passage could plausibly be either.
+
+Lists and tables are useful reference signals, but they are heuristics rather
+than the deciding rule.
+
+## Be cautious about explanatory digressions
+
+A short clarification can support reference.
+
+Treat explanation as a problem when it substantially interrupts consultation.
+
+Typical signs include:
+
+- a factual entry expands into reasons and history;
+- a technical definition becomes a conceptual essay;
+- the reader must work through interpretation before reaching the needed fact.
+
+This can harm both needs:
+
+- reference becomes slower to consult;
+- explanation remains too fragmented to develop properly.
+
+Do not move a one-sentence clarification merely because it has an explanatory
+function.
+
+## Functional-quality limits
+
+Reference aspires to accuracy, precision, completeness, clarity, and
+reliability.
+
+This skill cannot verify those properties merely by applying Diátaxis.
+
+Do not claim that the reference is accurate or complete unless the supplied
+evidence establishes that independently.
+
+Reference structure can expose a possible functional-quality problem.
+
+For example, if several parallel technical entities have predictable entries
+and a corresponding entity appears to be absent, flag a possible coverage
+gap.
+
+Treat this as evidence to investigate, not proof of incompleteness.
 
 ## Diagnostic questions
 
 Ask:
 
-- What thing or system element is this page describing?
-- Would a working reader come here mainly to look something up?
-- Does the page provide dependable facts rather than guide a particular
-  project?
-- Is the scope aligned with a meaningful part of the machinery?
-- Does the organization make information easy to locate?
-- Does the documentation structure correspond sensibly to the system's
-  structure?
-- Are similar entities documented using predictable patterns?
-- Are important properties, constraints, behavior, values, and warnings easy
-  to distinguish?
-- Is the page drifting into instructions for an independent real-world task?
-- Is it drifting into reasons, history, trade-offs, interpretation, or broader
-  conceptual discussion?
-- Do examples illustrate the described machinery, or quietly become tutorials
-  or how-to guides?
+- What machinery or technical object is the reader consulting?
+- Does the reader need this information while working?
+- Is the page primarily describing rather than guiding a project?
+- Does the technical object provide a sensible scope?
+- Does the structure reflect meaningful system relationships?
+- Has implementation structure been copied too literally?
+- Can a reader find individual facts without reading the entire page?
+- Are related entities presented consistently?
+- Are technical facts clearly distinguishable from interpretation or opinion?
+- Are normative statements describing constraints or actually leading a task?
+- Do examples illustrate the machinery or become another documentation mode?
+- Does explanatory material interfere with lookup?
+- Does the structure reveal a possible coverage gap?
 
-## Common failure patterns
+## Common structural failures
 
 ### Task guidance embedded in reference
 
-The page begins by describing an object, feature, or API but turns into
-instructions for accomplishing a particular reader goal.
-
-That task may deserve a how-to guide that links back to the reference.
+The page stops describing the machinery and begins leading one particular
+reader project.
 
 ### Explanation embedded in reference
 
-History, rationale, alternatives, interpretation, or conceptual discussion
-expands around factual description.
+Reasons, alternatives, history, or interpretation expand until factual lookup
+is interrupted.
 
-That material may be valuable, but it serves understanding rather than lookup.
+### Arbitrary prose organization
 
-### Inconsistent structure
+Meaningful relationships in the technical object are hidden by an organization
+that does not help consultation.
 
-Related entities expose similar information under different headings, in
-different orders, or in different formats.
+### Mechanical implementation mirroring
 
-This makes consultation slower and less predictable.
+Internal code organization is reproduced even when it does not correspond to a
+useful reader-facing technical structure.
 
-### Structure that obscures the machinery
+### Inconsistent patterns
 
-Information is grouped according to arbitrary prose themes even though readers
-navigate the underlying system through clear entities, categories, or
-relationships.
+Parallel entities use different headings, terminology, order, or formats.
 
-### Description becomes commentary
+### Facts mixed with commentary
 
-Facts are mixed with persuasion, speculation, unnecessary judgement, or
-discursive interpretation.
+Opinion, speculation, or promotional language makes authoritative information
+harder to identify.
 
-Reference should give the reader confidence about what the machinery is and
-does.
+### Example becomes another document
 
-### No clear place for important facts
-
-The page's architecture makes it difficult to locate obvious categories of
-information such as:
-
-- possible values;
-- parameters;
-- constraints;
-- behavior;
-- warnings;
-- relationships;
-- limitations.
-
-Do not use this observation to claim factual completeness or incompleteness
-without sufficient evidence.
-
-The diagnosis is about whether the structure supports reference use.
-
-## Supporting content and boundaries
-
-Reference can contain:
-
-- concise usage examples;
-- short descriptions of correct use;
-- warnings;
-- limited contextual notes needed to understand a fact.
-
-These do not automatically turn the page into another mode.
-
-The boundary is crossed when the page substantially begins to:
-
-- lead the reader through a real-world project;
-- teach a learner through a guided experience;
-- develop a broader conceptual understanding.
+An illustration grows into a complete task or conceptual discussion.
 
 ## Recommendation patterns
 
-Prefer recommendations that improve consultation and predictability.
+Prefer one change that improves dependable consultation, for example:
 
-Depending on the diagnosis, recommend one high-value change such as:
+- reorganize the page around meaningful machinery structure;
+- standardize parallel entries;
+- separate a real task into a how-to guide;
+- move extended conceptual discussion to explanation;
+- make constraints or properties easier to locate;
+- separate authoritative facts from commentary;
+- reduce an overgrown example to illustration;
+- expose a technical relationship hidden by the current structure.
 
-- reorganize the page around the logical structure of the machinery;
-- introduce consistent patterns for related entities;
-- separate a task-oriented procedure into a how-to guide;
-- move extended rationale or conceptual discussion to explanation;
-- replace discursive prose with clearer factual structure;
-- make important properties, constraints, or warnings easier to find;
-- add concise examples that illustrate usage without becoming a tutorial.
-
-Do not reorganize reference around reader goals merely because goal-oriented
-organization is valuable in how-to documentation.
-
-Product-led structure is a strength of reference when it helps readers consult
-the machinery efficiently.
+Do not reorganize reference around one reader project merely because that
+would be appropriate for how-to documentation.
