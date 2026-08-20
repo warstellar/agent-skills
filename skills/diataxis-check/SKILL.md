@@ -405,8 +405,17 @@ response into fields such as:
 - Confidence
 - Compliance score
 
-Do not narrate the internal process of loading references or applying the
-compass.
+Do not describe the internal review workflow, including applying the compass,
+classifying the mode, or consulting mode references, unless the requester
+explicitly asks for the reasoning or a formal Diátaxis analysis.
+
+State the result of that reasoning directly in reader-centered terms.
+
+Instead of:
+"I applied the compass and identified this as a how-to guide..."
+
+Prefer:
+"This page appears to help an experienced reader modify and publish a workflow."
 
 If the requester explicitly asks for classification, a formal Diátaxis audit,
 or the underlying reasoning, provide the compass and mode analysis.
