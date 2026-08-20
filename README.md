@@ -52,7 +52,7 @@ It looks at word choice, rhythm, structure, formatting, vague claims, promotiona
 
 Reviews one technical-documentation page or fragment using the [Diátaxis](https://diataxis.fr/) framework.
 
-It identifies the user need and dominant documentation mode, spots meaningful mixing between tutorials, how-to guides, reference, and explanation, and recommends one concrete next improvement.
+It infers what the intended reader is trying to do or understand, checks whether the page's scope and structure serve that need, and recommends one high-value structural improvement. Diátaxis provides the model for deciding what the page should do — not just a label for what type of documentation it is.
 
 [View skill](skills/diataxis-check/SKILL.md)
 
