@@ -396,23 +396,20 @@ evidence that the inferred purpose is the correct purpose.
 
 ### 8. Recommend one next improvement
 
-Choose one bounded change that would produce a meaningful improvement.
+Recommend one next change that addresses the highest-value problem you identified.
 
-Possible changes include:
+Match the level of the recommendation to the level of the problem. Do not
+reduce a structural or purpose-level problem to a cosmetic or local edit merely
+to keep the recommendation small.
 
-- clarify or narrow the reader need;
-- split an independent task into another page;
-- reorganize a how-to around the reader's project;
-- repair a missing tutorial action/result checkpoint;
-- restructure reference around the machinery it describes;
-- bound an explanation around a clearer conceptual question;
-- move a substantial digression out of the reader's immediate flow;
-- relocate a prerequisite or decision to the point where it is needed.
+The recommendation should still be bounded enough to act on without requiring
+a complete redesign of the documentation.
 
-Explain why the recommendation follows from the reader situation.
+Explain why this change follows from the reader situation and the diagnosed
+problem.
 
-Do not turn the review into a complete redesign unless the requester asks for
-one.
+Do not produce a complete replacement or redesign unless the requester asks
+for one.
 
 ## Treat friction as evidence, not proof
 
