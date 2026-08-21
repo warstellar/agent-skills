@@ -5,12 +5,13 @@ description: >
   Diátaxis as a content-design framework. Use when the user asks whether a
   documentation page is well structured, logically scoped, organized around
   the intended reader's need, appropriate for its audience, or how it could be
-  improved according to Diátaxis. Infer the intended reader and their need,
-  use the Diátaxis compass to determine what kind of documentation would serve
-  that need, consult the relevant mode-specific diagnostic guidance, compare
-  the page with that model, identify the most important page-level problem,
-  and recommend one focused improvement. Classification is an intermediate
-  reasoning step, not the goal of the review.
+  improved according to Diátaxis. Establish the intended reader and desired
+  outcome from requester-provided context when available; otherwise infer them
+  from the page as hypotheses rather than ground truth. Compare the page's
+  apparent purpose with its intended purpose before applying the Diátaxis
+  compass and mode-specific diagnostic guidance. Identify the most important
+  page-level problem and recommend one focused improvement. Classification is
+  an intermediate reasoning step, not the goal of the review.
 ---
 
 # Diátaxis Check
@@ -58,16 +59,39 @@ architecture analysis.
 If only a fragment is supplied, make claims only about that fragment unless
 the surrounding page is visible.
 
-## Start from the reader situation
+## Establish the reader situation
 
-Do not classify a page from its title, formatting, apparent difficulty, or
-presence of familiar elements such as steps, tables, examples, or conceptual
-prose.
+Do not treat the page as authoritative evidence of its own intended purpose.
 
-Start by asking what the intended reader needs from the documentation at this
-moment.
+Keep two things distinct:
 
-The need is situational.
+- **Intended reader and outcome** — who the documentation is supposed to serve
+  and what it is supposed to help them accomplish or understand.
+- **Apparent reader and outcome** — who the page itself appears to serve and
+  what it appears to help them accomplish or understand.
+
+Use evidence in this order:
+
+1. requester-provided context about the intended audience, goal, workflow, or
+   desired outcome;
+2. other explicit context supplied with the page;
+3. evidence from the page itself.
+
+When the requester provides an intended reader or outcome, treat that context
+as the evaluation target. Do not silently replace it with a different purpose
+inferred from the page.
+
+When the intended reader or outcome is not known, infer the apparent reader
+situation from the page, but treat that inference as a hypothesis rather than
+ground truth.
+
+If materially different plausible purposes would lead to different review
+results, ask the requester for the missing context before giving an overall
+positive or negative judgement.
+
+A coherent page can still be the wrong page for its intended purpose.
+
+The reader need is situational.
 
 An experienced practitioner can be studying something unfamiliar. A beginner
 can be performing real work. Do not equate tutorial with beginner or how-to
@@ -186,9 +210,16 @@ scope, organization, reader assumptions, and boundaries.
 
 ## Review workflow
 
-### 1. Infer the reader and the need
+### 1. Establish the intended and apparent reader outcome
 
-Use evidence from the page:
+First identify any requester-provided evidence about:
+
+- the intended reader;
+- the situation they are in;
+- what the document is supposed to help them accomplish or understand;
+- any larger workflow or business outcome the document is meant to support.
+
+Then inspect the page to determine its apparent reader and outcome using:
 
 - title and introduction;
 - headings;
@@ -198,8 +229,24 @@ Use evidence from the page:
 - assumptions about existing competence;
 - expected outcome or understanding.
 
+Keep the intended and apparent reader situations separate.
+
+Do not use the page's own structure or content as sufficient evidence that its
+apparent purpose is the correct intended purpose.
+
+For action-oriented documentation, state the outcome as a concrete end state:
+what has the reader accomplished, produced, configured, or become able to do
+by the end?
+
+For cognition-oriented documentation, state what the reader should understand
+or be able to reason about by the end.
+
 If several substantial reader needs are present, preserve that finding rather
 than inventing one artificial purpose.
+
+If the intended outcome is unknown and materially different plausible outcomes
+would change the verdict, ask the requester for the missing context before
+continuing to an overall judgement.
 
 ### 2. Determine the expected mode
 
@@ -223,14 +270,30 @@ Use it to establish what should determine:
 - appropriate supporting material;
 - likely neighboring-mode failures.
 
-### 4. Compare the page with the expected model
+### 4. Compare the page with the intended outcome and expected model
 
-Ask whether the page actually serves the inferred reader need in the way that
-this mode requires.
+First compare the page's apparent reader and outcome with the intended reader
+and outcome, when the latter are known.
+
+If they differ materially, treat that purpose mismatch as the primary finding.
+A page can be internally coherent and follow its Diátaxis mode well while still
+serving the wrong reader need.
+
+Then ask whether the page serves the intended reader need in the way that the
+expected mode requires.
+
+For action-oriented documentation, state the concrete end state and check
+whether each major section advances the reader toward that same end state.
+
+Do not mistake a sequence of individually valid actions for a coherent journey.
+Several feature demonstrations, tasks, or visible results do not form one
+tutorial or how-to merely because they can be performed in sequence.
 
 Look for concrete problems such as:
 
+- the page's apparent purpose differs from its intended purpose;
 - the page has no stable reader need;
+- its major sections do not advance one coherent reader outcome;
 - its scope follows a product or topic boundary that does not fit the reader
   situation;
 - several independently meaningful tasks or subjects are bundled together;
@@ -308,7 +371,11 @@ For example:
 
 Do not produce a backlog of every possible improvement.
 
-If the page already serves its reader coherently, say so.
+If the page serves the known intended reader and outcome coherently, say so.
+
+If the intended purpose is only inferred from the page itself, phrase any
+positive judgement conditionally. Do not use the page's internal coherence as
+evidence that the inferred purpose is the correct purpose.
 
 ### 8. Recommend one next improvement
 
@@ -388,8 +455,14 @@ quality.
 
 Write concise, natural editorial feedback.
 
-Start with the page's apparent reader need and whether the page is coherently
-designed around it.
+Start with the intended reader and outcome when they are known, and say whether
+the page is coherently designed around them.
+
+If the intended purpose is not known, clearly distinguish what is inferred from
+the page from what is actually known.
+
+If missing audience or outcome context could materially change the verdict, ask
+for that context instead of concluding that the page works well.
 
 Then explain the most important problem using concrete evidence from the page.
 
