@@ -210,14 +210,34 @@ scope, organization, reader assumptions, and boundaries.
 
 ## Review workflow
 
-### 1. Establish the intended and apparent reader outcome
+### 1. Establish the evaluation target
 
-First identify any requester-provided evidence about:
+Keep the document's **intended purpose** separate from its **apparent purpose**.
 
-- the intended reader;
-- the situation they are in;
-- what the document is supposed to help them accomplish or understand;
-- any larger workflow or business outcome the document is meant to support.
+The intended purpose is the external reason this document is supposed to
+exist: who it is meant to serve, in what situation, and what outcome it is
+supposed to produce.
+
+The apparent purpose is what the document itself appears or claims to help the
+reader do or understand.
+
+Never establish the intended purpose from the document under review itself.
+
+Statements in the page title, introduction, headings, navigation, or body about
+who the page is for or what it will accomplish are evidence of the page's
+apparent purpose only. They are not independent evidence that this is the
+correct purpose for the page.
+
+Establish the intended purpose only from requester-provided or other external
+context.
+
+If external context provides an intended reader or outcome, use it as the
+evaluation target and compare the page's apparent purpose against it.
+
+If no external intended purpose is available, do not infer one. Continue by
+evaluating the page against its apparent purpose, but explicitly limit the
+conclusion to internal coherence. Do not conclude that the page is appropriate
+for its real documentation or product goal.
 
 Then inspect the page to determine its apparent reader and outcome using:
 
@@ -229,24 +249,15 @@ Then inspect the page to determine its apparent reader and outcome using:
 - assumptions about existing competence;
 - expected outcome or understanding.
 
-Keep the intended and apparent reader situations separate.
-
-Do not use the page's own structure or content as sufficient evidence that its
-apparent purpose is the correct intended purpose.
-
-For action-oriented documentation, state the outcome as a concrete end state:
-what has the reader accomplished, produced, configured, or become able to do
-by the end?
+For action-oriented documentation, state the apparent outcome as a concrete
+end state: what has the reader accomplished, produced, configured, or become
+able to do by the end?
 
 For cognition-oriented documentation, state what the reader should understand
 or be able to reason about by the end.
 
-If several substantial reader needs are present, preserve that finding rather
-than inventing one artificial purpose.
-
-If the intended outcome is unknown and materially different plausible outcomes
-would change the verdict, ask the requester for the missing context before
-continuing to an overall judgement.
+If several substantial apparent reader needs are present, preserve that finding
+rather than inventing one artificial purpose.
 
 ### 2. Determine the expected mode
 
@@ -270,17 +281,23 @@ Use it to establish what should determine:
 - appropriate supporting material;
 - likely neighboring-mode failures.
 
-### 4. Compare the page with the intended outcome and expected model
+### 4. Check purpose fit before mode fit
 
-First compare the page's apparent reader and outcome with the intended reader
-and outcome, when the latter are known.
+If an externally established intended purpose is available, first compare it
+with the page's apparent purpose.
 
-If they differ materially, treat that purpose mismatch as the primary finding.
-A page can be internally coherent and follow its Diátaxis mode well while still
-serving the wrong reader need.
+A mismatch between intended and apparent purpose takes precedence over
+Diátaxis mode quality.
 
-Then ask whether the page serves the intended reader need in the way that the
-expected mode requires.
+A document can be an excellent tutorial, how-to guide, reference page, or
+explanation and still be the wrong document for the intended reader outcome.
+
+If no external intended purpose is available, do not make a positive judgement
+about purpose fit. Evaluate only whether the page is internally coherent
+relative to the purpose it appears to pursue.
+
+Then ask whether the page serves the intended reader need, when known, in the
+way that the expected mode requires.
 
 For action-oriented documentation, state the concrete end state and check
 whether each major section advances the reader toward that same end state.
@@ -455,19 +472,35 @@ quality.
 
 Write concise, natural editorial feedback.
 
-Start with the intended reader and outcome when they are known, and say whether
-the page is coherently designed around them.
+When an externally established intended reader or outcome is available, start
+with that evaluation target and say whether the page is coherently designed
+around it.
 
-If the intended purpose is not known, clearly distinguish what is inferred from
-the page from what is actually known.
+When no external intended purpose is available, clearly distinguish the page's
+apparent purpose from an actually established intended purpose.
 
-If missing audience or outcome context could materially change the verdict, ask
-for that context instead of concluding that the page works well.
+Do not say that a page "works well", "serves its reader well", "is appropriate
+for its audience", or make an equivalent unconditional positive judgement when
+the intended purpose has only been derived from the page itself.
+
+In that case, limit the conclusion to internal coherence. For example:
+
+> This page is internally coherent as a tutorial for X. From the page alone,
+> however, I cannot determine whether X is the outcome this documentation is
+> actually supposed to serve.
+
+If missing audience or outcome context could materially change the verdict,
+say what context is missing. Ask the requester for it when answering the
+question responsibly requires it.
+
+If the page's apparent purpose materially differs from an externally
+established intended purpose, make that mismatch the primary finding even when
+the page follows its Diátaxis mode well internally.
 
 Then explain the most important problem using concrete evidence from the page.
 
 Recommend one practical next improvement and explain why it would better serve
-the intended reader.
+the intended reader or outcome.
 
 Use Diátaxis terminology when it clarifies the diagnosis, but do not force the
 response into fields such as:
@@ -485,10 +518,12 @@ explicitly asks for the reasoning or a formal Diátaxis analysis.
 State the result of that reasoning directly in reader-centered terms.
 
 Instead of:
-"I applied the compass and identified this as a how-to guide..."
+
+> I applied the compass and identified this as a how-to guide...
 
 Prefer:
-"This page appears to help an experienced reader modify and publish a workflow."
+
+> This page appears to help an experienced reader modify and publish a workflow.
 
 If the requester explicitly asks for classification, a formal Diátaxis audit,
 or the underlying reasoning, provide the compass and mode analysis.
