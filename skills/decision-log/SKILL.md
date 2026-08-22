@@ -44,6 +44,9 @@ When in doubt, do not record. A missing marginal decision is better than a noisy
 
 An explicit user request to record a decision overrides the automatic decision gate.
 
+Treat phrases such as "record this decision", "log this", "let's capture this",
+or equivalent requests as explicit intent to add the decision to the log.
+
 ## What not to record
 
 Do not record routine execution choices merely because a choice was made.
