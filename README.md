@@ -18,6 +18,7 @@ Or pick a skill:
 npx skills add warstellar/agent-skills --skill deslop
 npx skills add warstellar/agent-skills --skill diataxis-check
 npx skills add warstellar/agent-skills --skill decision-log
+npx skills add warstellar/agent-skills --skill brand-naming-to-handoff
 ```
 
 ## Skills
@@ -57,6 +58,14 @@ Maintains a lightweight `DECISIONS.md` log of decisions whose reasoning should s
 It records durable changes in direction, assumptions, workflows, structure, or constraints while ignoring routine execution choices and other noise. It works across software projects, product and design work, research, knowledge bases, and other persistent agent workspaces.
 
 [View skill](skills/decision-log/SKILL.md)
+
+### brand-naming-to-handoff
+
+Develops a product brand from naming and shortlist through independently explored visual directions, comparison, and a practical handoff.
+
+Each direction author discovers their own visual territory, references, and prompt from a shared product brief. The coordinator checks differentiation and compares actual results. A separate Daymoon reference preserves project-specific decisions without imposing that style on other products.
+
+[View skill](skills/brand-naming-to-handoff/SKILL.md)
 
 ## Licensing
 

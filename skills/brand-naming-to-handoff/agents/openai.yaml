@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand naming to handoff"
+  short_description: "Independent brand directions, comparison, and handoff"
+  default_prompt: "Use $brand-naming-to-handoff to develop names, independently explore visual directions with separate authors, compare the results, and prepare a brand handoff. Discuss the work with me in Russian; write customer-facing copy in English using sentence case."
