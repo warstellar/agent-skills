@@ -4,7 +4,7 @@ description: Maintain a lightweight DECISIONS.md log of durable, material decisi
 license: MIT
 metadata:
   author: Ian Corvin
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Decision Log
@@ -47,6 +47,21 @@ An explicit user request to record a decision overrides the automatic decision g
 Treat phrases such as "record this decision", "log this", "let's capture this",
 or equivalent requests as explicit intent to add the decision to the log.
 
+## Whose decision it is
+
+A decision is a choice the user made or clearly accepted. An agent's own proposal is not a decision until the user accepts it.
+
+- Record what the user chose. Do not present the agent's arguments as the user's reasons.
+- Record an alternative as rejected only when the user rejected it. An option the agent proposed and then dropped, or one the user never answered, is not a rejection: leave it out.
+- A short reply such as "yes" or "ok" accepts only the point it clearly answers, not every side point of the agent's last message.
+- If the agent made a lasting choice on its own while working, ask the user or leave it out. Do not record it as if the user had decided it.
+
+## Decisions made in steps
+
+When a topic is worked out in a series of small steps in one discussion, do not record each step as it is agreed. Write one entry when the topic is settled, describing the final outcome.
+
+Until then, keep interim agreements and open questions in the workspace's working notes if it has them. If work on the topic stops before it is settled, record only the settled part, and only when it would otherwise be lost.
+
 ## What not to record
 
 Do not record routine execution choices merely because a choice was made.
@@ -61,7 +76,9 @@ Examples include:
 - refactoring that does not materially change behavior or structure;
 - local implementation details that naturally follow from an existing decision;
 - temporary operational choices with no expected lasting effect;
-- actions taken solely to complete the current task.
+- actions taken solely to complete the current task;
+- ideas, options and open questions, even under their own heading such as "Not decided" or "Ideas";
+- the agent's own proposals the user did not accept.
 
 The amount of thought required does not make something a durable decision.
 
