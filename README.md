@@ -25,21 +25,11 @@ npx skills add warstellar/agent-skills --skill brand-naming-to-handoff
 
 ### deslop
 
-Detects, critiques, and rewrites text that sounds generically AI-written.
+Drafts, edits, and reviews text for the people who will read it and what they need at that moment. Use it for product and game UI copy, including strings in code, and for customer-facing or published writing.
 
-It catches recurring patterns in word choice, rhythm, structure, formatting, vague claims, promotional language, and other LLM habits, then rewrites toward something more specific and human.
+On a first-run screen, a hint can teach players a control they have not used before. Once the action is visible and clear, the same hint can repeat the interface. Deslop checks that fit before editing the wording.
 
 [View skill](skills/deslop/SKILL.md)
-
-<details>
-<summary>Example</summary>
-
-| AI version | Human version |
-|---|---|
-| "This isn't just a tool. It's a revolution." | "This tool cut onboarding from 3 weeks to 4 days." |
-| "serves as a critical component, ensuring seamless integration" | "is the piece that connects the two systems" |
-
-</details>
 
 ### diataxis-check
 
